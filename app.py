@@ -33,8 +33,16 @@ def load_assets():
 vectorizer, models = load_assets()
 
 # --- UI Layout ---
-st.image('https://static.vecteezy.com/system/resources/thumbnails/003/317/129/small/female-stressed-with-mouth-open-irritation-factor-vector.jpg', width = 200)
-st.title("Stress Detection Hub")
+col1, col2 = st.columns([1, 4])
+
+with col1:
+    st.image('https://static.vecteezy.com/system/resources/thumbnails/003/317/129/small/female-stressed-with-mouth-open-irritation-factor-vector.jpg', width=80)
+
+with col2:
+    st.title("Stress Detection Hub")
+
+#st.image('https://static.vecteezy.com/system/resources/thumbnails/003/317/129/small/female-stressed-with-mouth-open-irritation-factor-vector.jpg', width = 200)
+#st.title("Stress Detection Hub")
 st.write("Detect stress levels in text using multiple Machine Learning models.")
 
 # Model Selection Dropdown
@@ -65,6 +73,7 @@ if st.button("Analyze Sentiment"):
             st.success(f"**Result from {selected_model_name}: No Stress Detected**")
 
 st.info("Note: This tool is for project demonstration purposes and uses 4 different ML architectures.")
+
 
 
 
