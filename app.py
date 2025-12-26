@@ -33,7 +33,7 @@ def load_assets():
 vectorizer, models = load_assets()
 
 # --- UI Layout ---
-st.image('C:\Users\LOQ\Desktop\stress vs non-stress.jpg', width = 800)
+st.image('blob:https://gr.pinterest.com/341e7bf5-2474-4514-af20-4307b3ca4bca', width = 800)
 st.title("Stress Detection Hub")
 st.write("Detect stress levels in text using multiple Machine Learning models.")
 
@@ -65,6 +65,7 @@ if st.button("Analyze Sentiment"):
             st.success(f"**Result from {selected_model_name}: No Stress Detected**")
 
 st.info("Note: This tool is for project demonstration purposes and uses 4 different ML architectures.")
+
 
 
 
